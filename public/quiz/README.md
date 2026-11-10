@@ -16,7 +16,13 @@ Agrega la ruta en `src/data/questions.ts`:
 }
 ```
 
-Si `image` queda en `null`, se muestra el arte de transmisión generado por la interfaz.
+Varias imágenes para una misma pregunta van en `images` y se muestran como una tira de paneles:
+
+```ts
+images: ["/quiz/1/1.webp", "/quiz/1/2.webp", "/quiz/1/3.webp"],
+```
+
+Si `image` e `images` quedan vacíos, se muestra el arte de transmisión generado por la interfaz.
 
 ## Regalo
 

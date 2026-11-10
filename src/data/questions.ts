@@ -9,6 +9,11 @@ export type QuizQuestion = {
    * Si queda en null, la interfaz dibuja el arte de transmisión.
    */
   image?: string | null;
+  /**
+   * Varias imágenes para la misma pregunta (se muestran en tiras verticales).
+   * Ejemplo: ["/quiz/1/1.webp", "/quiz/1/2.webp", "/quiz/1/3.webp"].
+   */
+  images?: string[] | null;
 };
 
 export const quizQuestions: QuizQuestion[] = [
@@ -18,7 +23,7 @@ export const quizQuestions: QuizQuestion[] = [
       "¿Qué integrante inició el proyecto de debuts en solitario de LOONA en octubre de 2016?",
     options: ["Hyunjin", "Haseul", "Heejin", "Kim Lip"],
     answer: 2,
-    image: null,
+    images: ["/quiz/1/1.webp", "/quiz/1/2.webp", "/quiz/1/3.webp"],
   },
   {
     id: 2,
@@ -31,7 +36,7 @@ export const quizQuestions: QuizQuestion[] = [
       "2019 con Butterfly",
     ],
     answer: 2,
-    image: null,
+    images: ["/quiz/2/1.webp", "/quiz/2/2.webp", "/quiz/2/3.gif"],
   },
   {
     id: 3,
@@ -39,7 +44,7 @@ export const quizQuestions: QuizQuestion[] = [
       "¿A qué edad debutó Yeojin (la integrante más joven) en enero de 2017?",
     options: ["12 años", "14 años", "16 años", "15 años"],
     answer: 1,
-    image: null,
+    images: ["/quiz/3/1.webp", "/quiz/3/2.webp", "/quiz/3/3.webp"],
   },
   {
     id: 4,
@@ -51,7 +56,7 @@ export const quizQuestions: QuizQuestion[] = [
       "Jinsoul: Singing in the Rain / Yves: One & Only",
     ],
     answer: 0,
-    image: null,
+    images: ["/quiz/4/1.webp", "/quiz/4/2.gif", "/quiz/4/3.webp"],
   },
   {
     id: 5,
@@ -64,7 +69,7 @@ export const quizQuestions: QuizQuestion[] = [
       "2021 / [&]",
     ],
     answer: 1,
-    image: null,
+    images: ["/quiz/5/1.webp", "/quiz/5/2.webp"],
   },
   {
     id: 6,
@@ -76,7 +81,7 @@ export const quizQuestions: QuizQuestion[] = [
       "Fue su primer tema 100% en inglés",
     ],
     answer: 1,
-    image: null,
+    images: ["/quiz/6/1.webp", "/quiz/6/2.webp", "/quiz/6/3.webp"],
   },
   {
     id: 7,
@@ -89,7 +94,7 @@ export const quizQuestions: QuizQuestion[] = [
       "LOONA 1/3 Repackage",
     ],
     answer: 0,
-    image: null,
+    images: ["/quiz/7/1.webp", "/quiz/7/2.gif"],
   },
   {
     id: 8,
@@ -101,7 +106,7 @@ export const quizQuestions: QuizQuestion[] = [
       "11 / LOONA 1/3",
     ],
     answer: 1,
-    image: null,
+    images: ["/quiz/8/1.webp", "/quiz/8/2.webp", "/quiz/8/3.webp"],
   },
   {
     id: 9,

@@ -28,7 +28,8 @@ export function MediaFrame({
 }: MediaFrameProps) {
   const accent = accents[index % accents.length];
   const signal = formatQuestionNumber(index);
-  const hasImage = Boolean(question.image);
+  const collage = question.images?.length ? question.images : null;
+  const hasImage = Boolean(collage || question.image);
 
   return (
     <div
@@ -43,7 +44,28 @@ export function MediaFrame({
         } as CSSProperties
       }
     >
-      {hasImage && question.image ? (
+      {collage ? (
+        <div className="absolute inset-0 flex">
+          {collage.map((src, panel) => (
+            <div
+              key={src}
+              className={cn(
+                "relative h-full flex-1",
+                panel > 0 && "border-l-2 border-ink",
+              )}
+            >
+              <Image
+                src={src}
+                alt={`Imagen ${panel + 1} de referencia para la pregunta ${index + 1}`}
+                fill
+                priority={priority}
+                sizes="(max-width: 768px) 28vw, 240px"
+                className="object-cover object-center"
+              />
+            </div>
+          ))}
+        </div>
+      ) : hasImage && question.image ? (
         <Image
           src={question.image}
           alt={`Imagen de referencia para la pregunta ${index + 1}`}
