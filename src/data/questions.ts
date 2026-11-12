@@ -119,7 +119,7 @@ export const quizQuestions: QuizQuestion[] = [
       "Telequinesis, Ilusiones y Clima",
     ],
     answer: 1,
-    image: null,
+    images: ["/quiz/9/1.webp", "/quiz/9/2.webp", "/quiz/9/3.webp"],
   },
   {
     id: 10,
@@ -132,14 +132,14 @@ export const quizQuestions: QuizQuestion[] = [
       "Lobo / Ciruela / Gris — Diosa griega",
     ],
     answer: 0,
-    image: null,
+    images: ["/quiz/10/1.webp", "/quiz/10/2.webp", "/quiz/10/3.webp"],
   },
   {
     id: 11,
     question: "¿Qué integrante es el androide/robot en el lore?",
     options: ["Heejin", "ViVi", "Yeojin", "Olivia Hye"],
     answer: 1,
-    image: null,
+    images: ["/quiz/11/1.webp", "/quiz/11/2.webp", "/quiz/11/3.webp"],
   },
   {
     id: 12,
@@ -147,7 +147,7 @@ export const quizQuestions: QuizQuestion[] = [
       "¿Quién fue abandonada en el Edén tras la huida de Yves, Chuu y Go Won?",
     options: ["Chuu", "Go Won", "Olivia Hye", "ViVi"],
     answer: 2,
-    image: null,
+    images: ["/quiz/12/1.webp", "/quiz/12/2.webp", "/quiz/12/3.webp"],
   },
   {
     id: 13,
@@ -160,7 +160,7 @@ export const quizQuestions: QuizQuestion[] = [
       "Robó el color de Kim Lip",
     ],
     answer: 1,
-    image: null,
+    image: "/quiz/13/1.webp",
   },
   {
     id: 14,
@@ -168,7 +168,7 @@ export const quizQuestions: QuizQuestion[] = [
       "¿En qué año ocurrió la expulsión de Chuu que marcó el fin de la era original del grupo?",
     options: ["2020", "2021", "2022", "2023"],
     answer: 2,
-    image: null,
+    images: ["/quiz/14/1.webp", "/quiz/14/2.webp", "/quiz/14/3.webp"],
   },
   {
     id: 15,
@@ -181,7 +181,7 @@ export const quizQuestions: QuizQuestion[] = [
       "Seúl, Corea del Sur",
     ],
     answer: 1,
-    image: null,
+    images: ["/quiz/15/1.webp", "/quiz/15/2.webp"],
   },
   {
     id: 16,
@@ -189,7 +189,7 @@ export const quizQuestions: QuizQuestion[] = [
       "Hyunjin fue la segunda integrante revelada (noviembre de 2016). ¿Cuál es su animal oficial en el lore?",
     options: ["Conejo", "Gato", "Cisne", "Lobo"],
     answer: 1,
-    image: null,
+    images: ["/quiz/16/1.webp"],
   },
 ];
 
