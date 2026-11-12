@@ -136,3 +136,56 @@ export function SignalIcon(props: IconProps) {
     </svg>
   );
 }
+
+export function MusicIcon(props: IconProps) {
+  return (
+    <svg {...baseProps(props)}>
+      <path d="M9 18V5l12-2v13" />
+      <circle cx="6" cy="18" r="3" />
+      <circle cx="18" cy="16" r="3" />
+    </svg>
+  );
+}
+
+export function PauseIcon(props: IconProps) {
+  return (
+    <svg {...baseProps(props)}>
+      <rect
+        x="7"
+        y="5"
+        width="3.5"
+        height="14"
+        rx="0.6"
+        fill="currentColor"
+        stroke="none"
+      />
+      <rect
+        x="13.5"
+        y="5"
+        width="3.5"
+        height="14"
+        rx="0.6"
+        fill="currentColor"
+        stroke="none"
+      />
+    </svg>
+  );
+}
+
+export function SkipBackIcon(props: IconProps) {
+  return (
+    <svg {...baseProps(props)}>
+      <path d="M6 5v14" />
+      <path d="M18 5.5 10 12l8 6.5v-13Z" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+export function SkipForwardIcon(props: IconProps) {
+  return (
+    <svg {...baseProps(props)}>
+      <path d="M18 5v14" />
+      <path d="M6 5.5 14 12l-8 6.5v-13Z" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}

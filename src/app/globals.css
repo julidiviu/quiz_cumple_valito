@@ -145,6 +145,65 @@ button:disabled {
   display: none;
 }
 
+/* ---------- Reproductor ---------- */
+
+.volume-range {
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.volume-range::-webkit-slider-runnable-track {
+  height: 8px;
+  border: 2px solid var(--ink);
+  background: linear-gradient(
+    to right,
+    var(--pink) var(--volume, 40%),
+    var(--paper) var(--volume, 40%)
+  );
+}
+
+.volume-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 18px;
+  margin-top: -5px;
+  border: 2px solid var(--ink);
+  background: var(--pink);
+}
+
+.volume-range::-moz-range-track {
+  height: 8px;
+  border: 2px solid var(--ink);
+  background: linear-gradient(
+    to right,
+    var(--pink) var(--volume, 40%),
+    var(--paper) var(--volume, 40%)
+  );
+}
+
+.volume-range::-moz-range-thumb {
+  width: 14px;
+  height: 18px;
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  background: var(--pink);
+}
+
+.volume-range:focus-visible {
+  outline: none;
+}
+
+.volume-range:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.volume-range:focus-visible::-moz-range-thumb {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
 /* ---------- Movimiento ---------- */
 
 .signal-dot {
@@ -174,6 +233,24 @@ button:disabled {
 
 .quiz-unfold {
   animation: quiz-unfold 760ms 240ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.player-panel {
+  transform-origin: bottom right;
+  animation: player-in 160ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.eq-bar {
+  transform-origin: bottom;
+  animation: eq-bounce 780ms ease-in-out infinite alternate;
+}
+
+.eq-bar:nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.eq-bar:nth-child(3) {
+  animation-delay: 240ms;
 }
 
 @keyframes signal-pulse {
@@ -251,6 +328,22 @@ button:disabled {
   }
 }
 
+@keyframes player-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.97);
+  }
+}
+
+@keyframes eq-bounce {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0.4);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -267,5 +360,14 @@ button:disabled {
 
   .boot-panel {
     display: none;
+  }
+
+  .player-panel {
+    animation: none;
+  }
+
+  .eq-bar {
+    animation: none;
+    transform: none;
   }
 }
